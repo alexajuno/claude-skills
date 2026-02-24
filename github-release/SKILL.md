@@ -10,7 +10,10 @@ Create a GitHub release for the current git repository.
 ## Steps
 
 1. Determine the repo root — run `git rev-parse --show-toplevel` from the current directory. If not in a git repo, ask the user which repo to use.
-2. Run `gh release list --limit 3` to show recent releases and identify the latest version tag.
+2. Fetch tags and determine the latest version:
+   - Run `git fetch --tags` to ensure local tags are up to date
+   - Run `gh release list --limit 10` to list recent releases
+   - Identify the latest version **by semver** (highest `v<major>.<minor>.<patch>`), not by creation date
 3. Analyze changes since the last tag:
    - Run `git log <last-tag>..HEAD --oneline` to list commits
    - Show the commit list to the user

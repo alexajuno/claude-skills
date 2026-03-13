@@ -7,34 +7,6 @@
 3. **Pending/overdue** — run `task status:pending +OVERDUE` and `task status:pending due:today`
 4. **Tomorrow** — fetch tomorrow's events from Google Calendar MCP, run `task status:pending due:tomorrow`
 
-## Output Format
-
-```
-# Evening recap — YYYY-MM-DD
-
-## Today
-### Events
-[Calendar events that happened today]
-[If none: "No events today."]
-
-### Completed
-[Tasks marked done today]
-[If none: "No tasks completed today."]
-
-### Still Pending
-[Overdue + due-today tasks not completed]
-[If none: skip section]
-
-## Tomorrow
-### Schedule
-[Tomorrow's calendar events]
-[If none: "Nothing scheduled tomorrow."]
-
-### Due
-[Tasks due tomorrow]
-[If none: "No tasks due tomorrow."]
-```
-
 ## Notes
 - Tone: brief, factual. Not reflective — that's for weekly.
 - End with tomorrow's preview so the user sleeps knowing what's ahead.
